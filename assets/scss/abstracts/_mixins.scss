@@ -1,0 +1,91 @@
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        box-shadow: inset $top $left $blur $color;
+    } @else {
+        box-shadow: $top $left $blur $color;
+    }
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin border-radius($all: null, $tl: $all, $tr: $all, $btl: $all, $btr: $all) {
+    border-top-left-radius: $tl;
+    border-top-right-radius: $tr;
+    border-bottom-right-radius: $btr;
+    border-bottom-left-radius: $btl;
+}
+
+@mixin centerAbsolute($pos) {
+    position: absolute;
+
+    @if $pos == 'both' {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if $pos == 'left' {
+        left: 50%;
+        transform: translateX(-50%);
+    } @else if $pos == 'top' {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin flex($direction: row, $content: null, $items: null, $wrap: null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $items;
+    flex-wrap: $wrap;
+}
+
+@mixin screen($breakpoint) {
+    @if ($breakpoint == 'tablet') {
+        @media (min-width: $device-tablet) {
+            @content;
+        }
+    }
+    @if ($breakpoint == 'pc') {
+        @media (min-width: $device-pc) {
+            @content;
+        }
+    }
+}
+
+@mixin column($key) {
+    $colName: getColumnName($key);
+
+    [class*='col-'] {
+        display: block;
+        padding-left: getGap($key) * 1px;
+        padding-right: getGap($key) * 1px;
+    }
+
+    @for $i from 0 through 12 {
+        @if ($i == 0) {
+            .col-#{$colName}-#{$i} {
+                display: none;
+            }
+        } @else {
+            .col-#{$colName}-#{$i} {
+                flex: 0 0 ($i * 100% / 12);
+                max-width: ($i * 100% / 12);
+            }
+        }
+    }
+
+    @for $i from 1 through 11 {
+        .col-#{$colName}-o-#{$i} {
+            margin-left: ($i * 100% / 12);
+        }
+    }
+}

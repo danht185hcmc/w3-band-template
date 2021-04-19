@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font: {
+    family: $font-family-base;
+    size: 62.5%;
+  }
+  line-height: 1.27;
+
+  box-sizing: border-box;
+}
