@@ -18,15 +18,56 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/f-navigation.js"></script>
   </head>
 
   <body>
     <div id="main">
-      <header></header>
+      <header class="header">
+        <nav class="navbar">
+          <ul class="navbar__menu-list">
+            <li class="navbar__menu-item" style="display: inline-block">
+              <a href="#" class="navbar__menu-link">Home</a>
+            </li>
+            <li class="navbar__menu-item">
+              <a href="#band" class="navbar__menu-link">Band</a>
+            </li>
+            <li class="navbar__menu-item">
+              <a href="#tour" class="navbar__menu-link">Tour</a>
+            </li>
+            <li class="navbar__menu-item">
+              <a href="#contact" class="navbar__menu-link">Contact</a>
+            </li>
+            <li class="navbar__menu-item">
+              <span class="navbar__menu-link"
+                >More <span class="fas fa-caret-down icon-custom"></span
+              ></span>
+
+              <ul class="sub-menu">
+                <li class="navbar__menu-item">
+                  <a href="#" class="navbar__menu-link">Merchandise</a>
+                </li>
+                <li class="navbar__menu-item">
+                  <a href="#" class="navbar__menu-link">Extras</a>
+                </li>
+                <li class="navbar__menu-item">
+                  <a href="#" class="navbar__menu-link">Media</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div id="menu-bars">
+            <span class="fas fa-bars"></span>
+          </div>
+        </nav>
+      </header>
 
       <main></main>
 
       <footer></footer>
     </div>
   </body>
+
+  <script src="./assets/js/navigation.js"></script>
 </html>

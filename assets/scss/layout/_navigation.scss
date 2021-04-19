@@ -1,0 +1,70 @@
+#menu-bars {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  height: $header-height;
+  padding: 0 25px;
+
+  line-height: $header-height;
+  cursor: pointer;
+
+  &:active {
+    @extend .navbar__menu-item:active;
+  }
+}
+
+.navbar {
+  height: 100%;
+
+  background: inherit;
+  font-size: $font-size-base;
+
+  overflow: hidden;
+  user-select: none;
+
+  &.active {
+    height: auto;
+    overflow: visible;
+  }
+
+  &__menu-item {
+    height: 46px;
+
+    &:active {
+      background: $color-black + 200%;
+      color: $color-black;
+    }
+  }
+
+  &__menu-link {
+    @extend %reset-link;
+
+    display: block;
+    padding: 0 25px;
+
+    line-height: $header-height;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    &.active {
+      @extend .navbar__menu-item:active;
+    }
+
+    .icon-custom {
+      padding-left: 5px;
+    }
+  }
+
+  .sub-menu {
+    display: none;
+
+    background: $color-white;
+    color: $color-black;
+
+    .navbar__menu-link {
+      text-transform: capitalize;
+    }
+  }
+}
