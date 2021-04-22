@@ -5,6 +5,9 @@ $color: (
   'white': (
     primary: #fff,
   ),
+  'red': (
+    primary: #f44336,
+  ),
   brand: (
     primary: #000,
   ),
@@ -53,8 +56,14 @@ $grid: (
   ),
 );
 
+$breakpoint: (
+  m: 740,
+  l: 1024,
+);
+
 $color-black: map-deep-get($color, 'black', 'primary');
 $color-white: map-deep-get($color, 'white', 'primary');
+$color-red: map-deep-get($color, 'red', 'primary');
 $color-primary: map-deep-get($color, 'brand', 'primary');
 
 $font-family-base: map-deep-get($typography, 'font', 'base'), Tahoma, Geneva, Verdana, sans-serif;

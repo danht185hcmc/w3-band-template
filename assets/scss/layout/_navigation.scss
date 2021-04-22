@@ -12,6 +12,10 @@
   &:active {
     @extend .navbar__menu-item:active;
   }
+
+  @include screen('tablet') {
+    display: none;
+  }
 }
 
 .navbar {
@@ -28,12 +32,35 @@
     overflow: visible;
   }
 
+  @include screen('tablet') {
+    overflow: visible;
+  }
+
+  &__menu-list {
+    @extend %reset-list;
+    @include screen('tablet') {
+      display: flex;
+    }
+  }
+
   &__menu-item {
+    position: relative;
     height: 46px;
 
     &:active {
       background: $color-black + 200%;
       color: $color-black;
+    }
+
+    @include screen('pc') {
+      &:hover {
+        background: $color-black + 200%;
+        color: $color-black;
+
+        .sub-menu {
+          display: block;
+        }
+      }
     }
   }
 
@@ -58,10 +85,20 @@
   }
 
   .sub-menu {
+    @extend %reset-list;
     display: none;
 
     background: $color-white;
     color: $color-black;
+
+    @include screen('tablet') {
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      min-width: 160px;
+      box-shadow: 5px 5px 5px rgba($color-black, 0.3);
+    }
 
     .navbar__menu-link {
       text-transform: capitalize;

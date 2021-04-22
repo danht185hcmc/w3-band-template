@@ -14,5 +14,5 @@
 }
 
 @function convertPxToEm($px) {
-    @return map-deep-get($grid, 'breakpoint', $px) / 16 * 1em;
+    @return map-deep-get($breakpoint, $px) / 16 * 1em;
 }

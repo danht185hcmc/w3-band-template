@@ -1,3 +1,6 @@
+.navbar__menu-list, .navbar .sub-menu {
+  list-style: none; }
+
 .navbar__menu-link {
   text-decoration: none;
   color: inherit; }
@@ -338,8 +341,27 @@ html {
 
 .header {
   height: 46px;
+  font-size: 1.5rem;
   background: #000;
   color: #fff; }
+  @media (min-width: 46.25em) {
+    .header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; } }
+  .header__search {
+    display: none;
+    padding: 0 25px;
+    line-height: 46px;
+    cursor: pointer; }
+    @media (min-width: 46.25em) {
+      .header__search {
+        display: block; }
+        .header__search:active {
+          background: #f44336; } }
+    @media (min-width: 64em) {
+      .header__search:hover {
+        background: #f44336; } }
 
 body {
   background: lightblue; }
@@ -352,6 +374,9 @@ body {
   padding: 0 25px;
   line-height: 46px;
   cursor: pointer; }
+  @media (min-width: 46.25em) {
+    #menu-bars {
+      display: none; } }
 
 .navbar {
   height: 100%;
@@ -362,11 +387,24 @@ body {
   .navbar.active {
     height: auto;
     overflow: visible; }
+  @media (min-width: 46.25em) {
+    .navbar {
+      overflow: visible; } }
+  @media (min-width: 46.25em) {
+    .navbar__menu-list {
+      display: flex; } }
   .navbar__menu-item {
+    position: relative;
     height: 46px; }
     .navbar__menu-item:active, #menu-bars:active, .navbar__menu-link.active {
       background: #c8c8c8;
       color: #000; }
+    @media (min-width: 64em) {
+      .navbar__menu-item:hover {
+        background: #c8c8c8;
+        color: #000; }
+        .navbar__menu-item:hover .sub-menu {
+          display: block; } }
   .navbar__menu-link {
     display: block;
     padding: 0 25px;
@@ -379,5 +417,12 @@ body {
     display: none;
     background: #fff;
     color: #000; }
+    @media (min-width: 46.25em) {
+      .navbar .sub-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 160px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); } }
     .navbar .sub-menu .navbar__menu-link {
       text-transform: capitalize; }

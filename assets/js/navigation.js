@@ -8,15 +8,19 @@ menuBars.addEventListener('click', () => {
 });
 
 menuLinks.forEach((item) => {
-  item.addEventListener('click', () => {
-    if (item.nextElementSibling !== null) {
-      if (item.nextElementSibling.style.display == '') {
-        openCloseSubMenu('open', item);
+  var viewWidth = document.getElementById('main').clientWidth;
+
+  if (viewWidth < 1024) {
+    item.addEventListener('click', () => {
+      if (item.nextElementSibling !== null) {
+        if (item.nextElementSibling.style.display == '') {
+          openCloseSubMenu('open', item);
+        } else {
+          openCloseSubMenu('close', item);
+        }
       } else {
-        openCloseSubMenu('close', item);
+        fNavbar(navbar, menuLinks);
       }
-    } else {
-      fNavbar(navbar, menuLinks);
-    }
-  });
+    });
+  }
 });

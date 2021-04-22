@@ -1,8 +1,35 @@
 .header {
   height: $header-height;
 
+  font-size: $font-size-base;
   background: $color-primary;
   color: $color-white;
+
+  @include screen('tablet') {
+    @include flex(row, space-between);
+  }
+
+  &__search {
+    display: none;
+    padding: 0 25px;
+
+    line-height: $header-height;
+    cursor: pointer;
+
+    @include screen('tablet') {
+      display: block;
+
+      &:active {
+        background: $color-red;
+      }
+    }
+
+    @include screen('pc') {
+      &:hover {
+        background: $color-red;
+      }
+    }
+  }
 }
 
 body {
