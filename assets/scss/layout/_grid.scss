@@ -6,7 +6,7 @@
       padding: 0;
 
       &.wide {
-        max-width: 1200px;
+        max-width: $value * 1px;
         margin: 0 auto;
       }
     }

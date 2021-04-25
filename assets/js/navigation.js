@@ -5,6 +5,8 @@ var subMenu = document.querySelectorAll('.navbar .sub-menu');
 
 menuBars.addEventListener('click', () => {
   fNavbar(navbar, menuLinks);
+
+  console.log('Đã click');
 });
 
 menuLinks.forEach((item) => {

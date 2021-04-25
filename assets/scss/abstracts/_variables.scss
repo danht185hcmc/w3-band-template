@@ -16,16 +16,17 @@ $color: (
 $typography: (
   font: (
     base: 'Lato',
-    secondary: 'Segoe UI',
+    heading: 'Segoe UI',
   ),
   size: (
     base: 1.5,
+    heading: 2.2,
   ),
 );
 
 $grid: (
   wide: (
-    default: 1200,
+    default: 800,
     m: (
       width: 644,
       min-width: 740,
@@ -67,7 +68,10 @@ $color-red: map-deep-get($color, 'red', 'primary');
 $color-primary: map-deep-get($color, 'brand', 'primary');
 
 $font-family-base: map-deep-get($typography, 'font', 'base'), Tahoma, Geneva, Verdana, sans-serif;
+$font-family-heading: map-deep-get($typography, 'font', 'heading'), Tahoma, Geneva, Verdana, sans-serif;
+
 $font-size-base: map-deep-get($typography, 'size', 'base') * 1rem;
+$font-size-heading: map-deep-get($typography, 'size', 'heading') * 1em;
 
 $header-height: 46px;
 
