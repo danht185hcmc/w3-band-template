@@ -1,5 +1,9 @@
 .header {
   position: relative;
+
+  top: 0;
+  left: 0;
+  right: 0;
   height: $header-height;
 
   font-size: $font-size-base;
@@ -7,6 +11,10 @@
   color: $color-white;
 
   z-index: 999;
+
+  &.fixed {
+    position: fixed;
+  }
 
   @include screen('tablet') {
     @include flex(row, space-between);

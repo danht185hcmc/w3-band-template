@@ -24,3 +24,13 @@ menuLinks.forEach((item) => {
     });
   }
 });
+
+window.addEventListener('scroll', () => {
+  var header = document.getElementById('header');
+
+  if (window.pageYOffset > 50) {
+    header.classList.add('fixed');
+  } else {
+    header.classList.remove('fixed');
+  }
+});
