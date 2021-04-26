@@ -5,8 +5,6 @@ var subMenu = document.querySelectorAll('.navbar .sub-menu');
 
 menuBars.addEventListener('click', () => {
   fNavbar(navbar, menuLinks);
-
-  console.log('Đã click');
 });
 
 menuLinks.forEach((item) => {
@@ -15,13 +13,13 @@ menuLinks.forEach((item) => {
   if (viewWidth < 1024) {
     item.addEventListener('click', () => {
       if (item.nextElementSibling !== null) {
-        if (item.nextElementSibling.style.display == '') {
+        if (item.nextElementSibling.style.display == '')
           openCloseSubMenu('open', item);
-        } else {
-          openCloseSubMenu('close', item);
-        }
+        else openCloseSubMenu('close', item);
       } else {
-        fNavbar(navbar, menuLinks);
+        if (viewWidth < 740) {
+          if (navbar.classList.contains('active')) fNavbar(navbar, menuLinks);
+        } else fNavbar(navbar, menuLinks);
       }
     });
   }
