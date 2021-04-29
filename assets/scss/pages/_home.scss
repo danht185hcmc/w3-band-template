@@ -1,3 +1,8 @@
+#tour {
+  background: $color-black;
+  color: $color-white;
+}
+
 .section-box {
   padding: 64px 32px;
   font-size: $font-size-base;
@@ -46,5 +51,73 @@
 
   &__item-img {
     width: 60%;
+  }
+}
+
+.schedule {
+  @extend %reset-list;
+
+  margin-top: 35px;
+
+  background: $color-white;
+  color: rgba($color-black, 0.7);
+
+  &__item {
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba($color-black, 0.3);
+  }
+
+  .sold-out {
+    display: inline-block;
+    margin-left: 16px;
+    padding: 0 5px;
+
+    background: $color-red;
+    color: $color-white;
+
+    &::before {
+      content: 'Sold out';
+    }
+  }
+
+  .number {
+    @include size(22px);
+    @include border-radius(50%);
+
+    margin-right: 16px;
+    float: right;
+
+    background: $color-black;
+    color: $color-white;
+
+    text-align: center;
+  }
+}
+
+.ticket {
+  padding: 32px 0;
+
+  &__img {
+    width: 100%;
+    vertical-align: middle;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__container {
+    padding: 0.01em 16px;
+
+    background: $color-white;
+    color: $color-black;
+  }
+
+  .country {
+    font-weight: 700;
+  }
+
+  .time {
+    color: rgba($color-black, 0.7);
   }
 }

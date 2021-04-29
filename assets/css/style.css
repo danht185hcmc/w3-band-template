@@ -1,4 +1,4 @@
-.navbar__menu-list, .navbar .sub-menu {
+.navbar__menu-list, .navbar .sub-menu, .schedule {
   list-style: none; }
 
 .navbar__menu-link {
@@ -348,16 +348,16 @@ p {
 
 .header {
   position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
   height: 46px;
   font-size: 1.5rem;
   background: #000;
   color: #fff;
   z-index: 999; }
   .header.fixed {
-    position: fixed; }
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; }
   @media (min-width: 46.25em) {
     .header {
       display: flex;
@@ -438,6 +438,22 @@ p {
     .navbar .sub-menu .navbar__menu-link {
       text-transform: capitalize; }
 
+.btn {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer; }
+  .btn:hover {
+    background: #b4b4b4;
+    color: #000; }
+
+#tour {
+  background: #000;
+  color: #fff; }
+
 .section-box {
   padding: 64px 32px;
   font-size: 1.5rem;
@@ -470,6 +486,50 @@ p {
     font-size: 1.2em; }
   .member__item-img {
     width: 60%; }
+
+.schedule {
+  margin-top: 35px;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.7); }
+  .schedule__item {
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+  .schedule .sold-out {
+    display: inline-block;
+    margin-left: 16px;
+    padding: 0 5px;
+    background: #f44336;
+    color: #fff; }
+    .schedule .sold-out::before {
+      content: 'Sold out'; }
+  .schedule .number {
+    width: 22px;
+    height: 22px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    margin-right: 16px;
+    float: right;
+    background: #000;
+    color: #fff;
+    text-align: center; }
+
+.ticket {
+  padding: 32px 0; }
+  .ticket__img {
+    width: 100%;
+    vertical-align: middle; }
+    .ticket__img:hover {
+      opacity: 0.7; }
+  .ticket__container {
+    padding: 0.01em 16px;
+    background: #fff;
+    color: #000; }
+  .ticket .country {
+    font-weight: 700; }
+  .ticket .time {
+    color: rgba(0, 0, 0, 0.7); }
 
 .c-align-justify {
   text-align: justify; }
