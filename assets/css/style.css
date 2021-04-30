@@ -438,10 +438,20 @@ p {
     .navbar .sub-menu .navbar__menu-link {
       text-transform: capitalize; }
 
+.form-group input {
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  outline: none; }
+
+.form-control {
+  margin-bottom: 10px;
+  width: 100%; }
+
 .btn {
   display: inline-block;
   margin-bottom: 16px;
   padding: 8px 16px;
+  min-width: 100px;
   background: #000;
   color: #fff;
   border: none;
@@ -466,6 +476,7 @@ p {
     text-transform: uppercase; }
   .section-box__sub-title {
     font-style: italic;
+    letter-spacing: 2px;
     opacity: 0.6; }
   .section-box__title, .section-box__sub-title {
     text-align: center; }
@@ -523,6 +534,7 @@ p {
     .ticket__img:hover {
       opacity: 0.7; }
   .ticket__container {
+    margin-bottom: 20px;
     padding: 0.01em 16px;
     background: #fff;
     color: #000; }
@@ -530,6 +542,27 @@ p {
     font-weight: 700; }
   .ticket .time {
     color: rgba(0, 0, 0, 0.7); }
+
+.contact {
+  margin-top: 35px; }
+  .contact__info .icon-custom {
+    margin-right: 10px;
+    width: 20px; }
+  .contact__info p {
+    margin: 10px 0; }
+  .contact__info a {
+    opacity: 0.8; }
+    .contact__info a:hover {
+      opacity: 1; }
+  .contact__form .btn-custom {
+    padding: 12px 0;
+    width: 100%;
+    text-transform: uppercase; }
+    @media (min-width: 64em) {
+      .contact__form .btn-custom {
+        float: right;
+        padding: 10px 0;
+        width: auto; } }
 
 .c-align-justify {
   text-align: justify; }

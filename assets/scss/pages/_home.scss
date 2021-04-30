@@ -19,6 +19,7 @@
 
   &__sub-title {
     font-style: italic;
+    letter-spacing: 2px;
     opacity: 0.6;
   }
 
@@ -107,6 +108,7 @@
   }
 
   &__container {
+    margin-bottom: 20px;
     padding: 0.01em 16px;
 
     background: $color-white;
@@ -119,5 +121,43 @@
 
   .time {
     color: rgba($color-black, 0.7);
+  }
+}
+
+.contact {
+  margin-top: 35px;
+
+  &__info {
+    .icon-custom {
+      margin-right: 10px;
+      width: 20px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    a {
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__form {
+    .btn-custom {
+      padding: 12px 0;
+      width: 100%;
+
+      text-transform: uppercase;
+
+      @include screen('pc') {
+        float: right;
+        padding: 10px 0;
+        width: auto;
+      }
+    }
   }
 }
