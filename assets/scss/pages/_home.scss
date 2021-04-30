@@ -3,12 +3,21 @@
   color: $color-white;
 }
 
+#map {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
 .section-box {
   padding: 64px 32px;
   font-size: $font-size-base;
   user-select: none;
 
   &__title {
+    margin-top: $header-height;
+
     font-family: $font-family-heading;
     font-size: $font-size-heading;
     font-weight: 400;
