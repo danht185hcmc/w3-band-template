@@ -461,12 +461,12 @@ p {
       text-transform: capitalize; }
 
 .form-group input {
-  padding: 10px 5px;
+  padding: 5px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   outline: none; }
 
 .form-control {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   width: 100%; }
 
 .btn {
@@ -482,24 +482,14 @@ p {
     background: #b4b4b4;
     color: #000; }
 
-.slider {
-  position: relative;
-  padding-top: 46.8%;
-  overflow: hidden; }
-  .slider__item {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover; }
-
-.slider-wrapper {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: calc(100% * 3);
-  transition: all ease-in-out 0.6s; }
+.slider__item {
+  display: none;
+  padding-top: 48%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+  .slider__item.active {
+    display: block; }
 
 #tour {
   background: #000;
@@ -508,9 +498,6 @@ p {
 #map img {
   display: block;
   width: 100%; }
-
-section.section-box {
-  padding-top: 18px; }
 
 .section-box {
   padding: 64px 32px;

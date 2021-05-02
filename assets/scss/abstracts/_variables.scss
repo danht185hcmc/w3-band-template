@@ -62,6 +62,8 @@ $breakpoint: (
   l: 1024,
 );
 
+$path: ();
+
 $color-black: map-deep-get($color, 'black', 'primary');
 $color-white: map-deep-get($color, 'white', 'primary');
 $color-red: map-deep-get($color, 'red', 'primary');

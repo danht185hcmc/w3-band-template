@@ -10,8 +10,15 @@
   }
 }
 
+section {
+  &.section-box {
+    padding-top: (64px - $header-height);
+  }
+}
+
 .section-box {
   padding: 64px 32px;
+
   font-size: $font-size-base;
   user-select: none;
 
