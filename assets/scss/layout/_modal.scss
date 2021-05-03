@@ -1,0 +1,154 @@
+.modal {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1000;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba($color-black, 0.2);
+    backdrop-filter: blur(8px);
+  }
+}
+
+#ticket-modal {
+  display: none;
+  padding: 0 20px;
+
+  .ticket {
+    position: relative;
+    top: 10%;
+
+    margin: auto;
+    padding: 0;
+
+    @include screen('pc') {
+      width: 50%;
+    }
+
+    background: $color-green;
+    font-size: $font-size-base;
+
+    &__header {
+      padding: 20px;
+
+      @include screen('tablet') {
+        padding: 30px 20px;
+      }
+
+      @include screen('pc') {
+        padding: 50px 20px;
+      }
+
+      h2 {
+        font-family: $font-family-heading;
+        font-size: $font-size-heading;
+        font-weight: 600;
+
+        text-align: center;
+        letter-spacing: 4.5px;
+
+        color: $color-white;
+      }
+    }
+
+    &__container {
+      margin: 0;
+      padding: 15px;
+      padding-bottom: 0;
+    }
+
+    &__control {
+      @include flex(column-reverse, space-between);
+      text-align: center;
+
+      @include screen('pc') {
+        @include flex(row, space-between);
+      }
+
+      .btn-custom {
+        width: 100%;
+        background: $color-red;
+
+        &:hover {
+          background: $color-red + 30;
+        }
+
+        @include screen('pc') {
+          width: auto;
+        }
+      }
+
+      a {
+        color: $color-blue;
+      }
+    }
+
+    p {
+      margin: 0.5em 0;
+    }
+  }
+
+  .btn-close-modal {
+    @include size(50px);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 10px;
+
+    text-align: center;
+    font-size: 2em;
+    color: $color-white;
+
+    cursor: pointer;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &:hover {
+      &::before {
+        content: '';
+        background: rgba($color-white, 0.2);
+        filter: blur(4px);
+      }
+    }
+
+    .icon-custom {
+      position: relative;
+      display: block;
+    }
+  }
+
+  .form-group {
+    .btn-custom {
+      padding: 15px 0;
+      text-transform: uppercase;
+      background: $color-green;
+
+      &:hover {
+        background: $color-green + 30;
+      }
+    }
+  }
+}

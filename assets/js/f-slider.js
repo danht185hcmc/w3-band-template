@@ -18,9 +18,5 @@ function moveSlider(status, index, sliderWrapper, sliderItem) {
     direction + (100 / sliderItem.length) * index + '%'
   })`;
 
-  console.log(
-    `translateX(${direction + (100 / sliderItem.length) * index + '%'})`
-  );
-
   return index;
 }

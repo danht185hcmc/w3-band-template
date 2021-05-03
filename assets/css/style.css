@@ -462,6 +462,8 @@ p {
 
 .form-group input {
   padding: 10px 5px;
+  padding-left: 15px;
+  width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.5);
   outline: none; }
 
@@ -469,11 +471,115 @@ p {
   margin-bottom: 15px;
   width: 100%; }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; }
+  .modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px); }
+
+#ticket-modal {
+  display: none;
+  padding: 0 20px; }
+  #ticket-modal .ticket {
+    position: relative;
+    top: 10%;
+    margin: auto;
+    padding: 0;
+    background: #009688;
+    font-size: 1.5rem; }
+    @media (min-width: 64em) {
+      #ticket-modal .ticket {
+        width: 50%; } }
+    #ticket-modal .ticket__header {
+      padding: 20px; }
+      @media (min-width: 46.25em) {
+        #ticket-modal .ticket__header {
+          padding: 30px 20px; } }
+      @media (min-width: 64em) {
+        #ticket-modal .ticket__header {
+          padding: 50px 20px; } }
+      #ticket-modal .ticket__header h2 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 2.2em;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 4.5px;
+        color: #fff; }
+    #ticket-modal .ticket__container {
+      margin: 0;
+      padding: 15px;
+      padding-bottom: 0; }
+    #ticket-modal .ticket__control {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      text-align: center; }
+      @media (min-width: 64em) {
+        #ticket-modal .ticket__control {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; } }
+      #ticket-modal .ticket__control .btn-custom {
+        width: 100%;
+        background: #f44336; }
+        #ticket-modal .ticket__control .btn-custom:hover {
+          background: #ff6154; }
+        @media (min-width: 64em) {
+          #ticket-modal .ticket__control .btn-custom {
+            width: auto; } }
+      #ticket-modal .ticket__control a {
+        color: #2196f3; }
+    #ticket-modal .ticket p {
+      margin: 0.5em 0; }
+  #ticket-modal .btn-close-modal {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer; }
+    #ticket-modal .btn-close-modal::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+    #ticket-modal .btn-close-modal:hover::before {
+      content: '';
+      background: rgba(255, 255, 255, 0.2);
+      filter: blur(4px); }
+    #ticket-modal .btn-close-modal .icon-custom {
+      position: relative;
+      display: block; }
+  #ticket-modal .form-group .btn-custom {
+    padding: 15px 0;
+    text-transform: uppercase;
+    background: #009688; }
+    #ticket-modal .form-group .btn-custom:hover {
+      background: #1eb4a6; }
+
 .btn {
   display: inline-block;
   margin-bottom: 16px;
   padding: 8px 16px;
   min-width: 100px;
+  letter-spacing: 2px;
   background: #000;
   color: #fff;
   border: none;
@@ -481,6 +587,8 @@ p {
   .btn:hover {
     background: #b4b4b4;
     color: #000; }
+  .btn--wide {
+    width: 100%; }
 
 .slider {
   position: relative;
@@ -509,15 +617,12 @@ p {
   display: block;
   width: 100%; }
 
-section.section-box {
-  padding-top: 18px; }
-
 .section-box {
   padding: 64px 32px;
   font-size: 1.5rem;
   user-select: none; }
   .section-box__title {
-    margin-top: 46px;
+    padding-top: 23px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2.2em;
     font-weight: 400;

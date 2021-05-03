@@ -22,6 +22,70 @@
   </head>
 
   <body>
+    <div id="ticket-modal" class="modal">
+      <div class="ticket">
+        <div
+          class="btn-close-modal"
+          onclick="document.getElementById('ticket-modal').style.display = null"
+        >
+          <span class="fas fa-times icon-custom"></span>
+        </div>
+
+        <header class="ticket__header">
+          <h2><span class="fas fa-suitcase"></span> Tickets</h2>
+        </header>
+
+        <div class="ticket__container">
+          <form action="" class="form-group">
+            <div class="form-control">
+              <p>
+                <label for="f-number-ticket-modal">
+                  <span class="fas fa-shopping-cart"></span>
+                  Tickets, $15 per person
+                </label>
+              </p>
+              <input
+                type="text"
+                name="f-number-ticket-modal"
+                id="f-number-ticket-modal"
+                placeholder="How many?"
+              />
+            </div>
+
+            <div class="form-control">
+              <p>
+                <label for="f-email-ticket-modal">
+                  <span class="fas fa-user"></span>
+                  Send to
+                </label>
+              </p>
+              <input
+                type="email"
+                name="f-email-ticket-modal"
+                id="f-email-ticket-modal"
+                placeholder="Enter email"
+              />
+            </div>
+
+            <button class="btn btn--wide btn-custom">
+              Pay <span class="fas fa-check"></span>
+            </button>
+          </form>
+
+          <div class="ticket__control">
+            <div
+              class="btn btn-custom"
+              onclick="document.getElementById('ticket-modal').style.display = null"
+            >
+              Close <span class="fas fa-times"></span>
+            </div>
+
+            <p>Need <a href="#">help?</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="main">
       <header id="header" class="header">
         <nav class="navbar">
@@ -353,4 +417,5 @@
   <script src="./assets/js/navigation.js"></script>
   <script src="./assets/js/f-slider.js"></script>
   <script src="./assets/js/slider.js"></script>
+  <script src="./assets/js/ticket-modal.js"></script>
 </html>

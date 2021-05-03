@@ -10,12 +10,6 @@
   }
 }
 
-section {
-  &.section-box {
-    padding-top: (64px - $header-height);
-  }
-}
-
 .section-box {
   padding: 64px 32px;
 
@@ -23,7 +17,7 @@ section {
   user-select: none;
 
   &__title {
-    margin-top: $header-height;
+    padding-top: $header-height / 2;
 
     font-family: $font-family-heading;
     font-size: $font-size-heading;

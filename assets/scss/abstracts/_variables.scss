@@ -8,6 +8,12 @@ $color: (
   'red': (
     primary: #f44336,
   ),
+  'green': (
+    primary: #009688,
+  ),
+  'blue': (
+    primary: #2196f3,
+  ),
   brand: (
     primary: #000,
   ),
@@ -67,6 +73,8 @@ $path: ();
 $color-black: map-deep-get($color, 'black', 'primary');
 $color-white: map-deep-get($color, 'white', 'primary');
 $color-red: map-deep-get($color, 'red', 'primary');
+$color-green: map-deep-get($color, 'green', 'primary');
+$color-blue: map-deep-get($color, 'blue', 'primary');
 $color-primary: map-deep-get($color, 'brand', 'primary');
 
 $font-family-base: map-deep-get($typography, 'font', 'base'), Tahoma, Geneva, Verdana, sans-serif;
