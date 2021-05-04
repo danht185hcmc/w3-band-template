@@ -663,6 +663,8 @@ p {
     display: inline-block;
     margin-left: 16px;
     padding: 0 5px;
+    min-width: 70px;
+    text-align: center;
     background: #f44336;
     color: #fff; }
     .schedule .sold-out::before {
